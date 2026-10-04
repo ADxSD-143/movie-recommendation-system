@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.env
+.streamlit/secrets.toml
+*.log
+dataset/*
+!dataset/tmdb_5000_movies.csv
+!dataset/tmdb_5000_credits.csv
+artifacts/*
+!artifacts/movies.pkl
+!artifacts/vectors.pkl
