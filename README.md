@@ -74,7 +74,6 @@ TMDB 5000 Movies and Credits Dataset.
 
 ## 👨‍💻 Author
 
-**Aditya Narayan Laha**  
+**Aditya Narayan**  
 B.Tech CSE — IIIT Bhubaneswar
 
-GitHub: https://github.com/ADxSD-143
