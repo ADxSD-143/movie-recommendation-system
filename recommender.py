@@ -62,9 +62,9 @@ def preprocess_movies(
         )
 
     movies_df = pd.read_csv(movies_path)
-    credits = pd.read_csv(credits_path)
+    credits_df = pd.read_csv(credits_path)
     movies = movies_df.merge(
-        credits,
+        credits_df,
         left_on="id",
         right_on="movie_id",
         validate="one_to_one",
@@ -188,8 +188,8 @@ def recommend(
     recommender: MovieRecommender | None = None,
 ) -> list[dict[str, Any]]:
     """Convenience API; pass a loaded model to reuse it across recommendations."""
-    model = recommender or _default_recommender()
-    return model.recommend(movie_title, n=n)
+    model_instance = recommender or _default_recommender()
+    return model_instance.recommend(movie_title, n=n)
 
 
 @lru_cache(maxsize=1)
